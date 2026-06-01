@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>隐私政策 — AIDICT 词根词缀学习助手</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.65;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+      color: #1a1a1a;
+      background: #fafafa;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e8e8e8; background: #111; }
+      a { color: #8ab4f8; }
+      hr { border-color: #333; }
+    }
+    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; }
+    p, li { font-size: 0.95rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 12px 0; }
+    th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; vertical-align: top; }
+    @media (prefers-color-scheme: dark) { th, td { border-color: #444; } }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+    @media (prefers-color-scheme: dark) { .meta { color: #999; } }
+    hr { margin: 2rem 0; border: none; border-top: 1px solid #ddd; }
+    a { color: #1a73e8; }
+  </style>
+</head>
+<body>
+  <h1>隐私政策</h1>
+  <p class="meta">AIDICT 词根词缀学习助手 · 最后更新：2026 年 6 月</p>
+
+  <p>
+    词根词缀学习助手（AIDICT，「我们」）重视你的隐私。本政策说明在使用 AIDICT Chrome 扩展（「扩展」）时，
+    我们收集哪些数据、如何使用、存储位置以及你享有的权利。
+  </p>
+
+  <hr />
+
+  <h2>1. 我们收集的数据</h2>
+
+  <h3>1.1 账户信息</h3>
+  <p>登录时我们可能收到：</p>
+  <table>
+    <thead><tr><th>数据</th><th>来源</th><th>用途</th></tr></thead>
+    <tbody>
+      <tr><td>电子邮箱</td><td>Google 登录或邮箱验证码</td><td>账户识别与认证</td></tr>
+      <tr><td>姓名 / 显示名</td><td>Google 登录（若你选择）</td><td>在扩展内展示</td></tr>
+      <tr><td>头像</td><td>Google 登录（若你选择）</td><td>在扩展内展示</td></tr>
+    </tbody>
+  </table>
+  <p>若仅使用邮箱验证码登录，我们仅收集你的电子邮箱。</p>
+
+  <h3>1.2 查词与学习数据</h3>
+  <p>为提供划词查词、词根词缀分析与词源树功能，在你<strong>主动查词</strong>时我们可能处理：</p>
+  <table>
+    <thead><tr><th>数据</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td>选中单词</td><td>你在网页中选中的英文单词（surface form）</td></tr>
+      <tr><td>分析结果</td><td>释义、词根词缀拆分、词源树、同根词等结构化结果</td></tr>
+      <tr><td>页面 URL（可选）</td><td>查词时所在页面的地址，用于历史记录上下文</td></tr>
+      <tr><td>单词本条目</td><td>你主动加入单词本的词汇及关联分析摘要</td></tr>
+    </tbody>
+  </table>
+  <p>我们不会持续监控或采集你浏览的全部网页内容；仅在你在页面上选中单词并触发查词时处理相关数据。</p>
+
+  <h3>1.3 AI 补全与反馈</h3>
+  <p>当你对词典未收录的语素段使用「AI 解答」，或对 AI 内容点赞/点踩时，我们可能存储：</p>
+  <ul>
+    <li>相关词条、语素位置与 AI 生成释义</li>
+    <li>匿名或关联账户的反馈计数（用于改进服务质量）</li>
+  </ul>
+
+  <hr />
+
+  <h2>2. 数据用途</h2>
+  <ul>
+    <li>提供查词、词源树、历史记录与单词本功能</li>
+    <li>验证身份并保持登录状态</li>
+    <li>缓存分析结果以提升响应速度</li>
+    <li>监控服务性能、排查故障</li>
+    <li>在法律要求范围内履行合规义务</li>
+  </ul>
+  <p>我们不会出售你的个人数据，也不会将个人数据用于第三方定向广告。</p>
+
+  <hr />
+
+  <h2>3. 数据存储位置</h2>
+
+  <h3>3.1 本地（你的设备）</h3>
+  <p>扩展使用 Chrome 本地存储（如 <code>chrome.storage</code>）保存：</p>
+  <ul>
+    <li>登录会话与认证令牌</li>
+    <li>查词结果短期缓存</li>
+    <li>界面偏好（如历史分组方式）</li>
+  </ul>
+
+  <h3>3.2 云端（Supabase）</h3>
+  <p>我们使用 Supabase 存储：</p>
+  <ul>
+    <li>认证数据（由 Supabase Auth 管理）</li>
+    <li>查词历史（<code>aidict_lookup_history</code>）</li>
+    <li>单词本（<code>aidict_wordbook</code>）</li>
+    <li>AI 语素补全与用户反馈（<code>morpheme_ai_overlay</code> 等）</li>
+  </ul>
+  <p>项目地址：<code>https://zpgaabbreliswbzvagmv.supabase.co</code></p>
+
+  <hr />
+
+  <h2>4. 第三方服务</h2>
+  <table>
+    <thead><tr><th>服务</th><th>用途</th><th>共享数据</th></tr></thead>
+    <tbody>
+      <tr><td>Supabase</td><td>认证、数据库、Edge Functions</td><td>账户信息、查词历史、分析结果</td></tr>
+      <tr><td>Google</td><td>Google 登录（OAuth）</td><td>邮箱、姓名、头像（仅在你选择 Google 登录时）</td></tr>
+      <tr><td>SiliconFlow（经 Supabase Edge Function）</td><td>AI 语素释义补全</td><td>词条与语素上下文（不含完整网页内容）</td></tr>
+    </tbody>
+  </table>
+  <p>请参阅各服务方隐私政策：</p>
+  <ul>
+    <li><a href="https://supabase.com/privacy" rel="noopener noreferrer">Supabase 隐私政策</a></li>
+    <li><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google 隐私政策</a></li>
+  </ul>
+
+  <hr />
+
+  <h2>5. 数据保留</h2>
+  <ul>
+    <li><strong>账户数据</strong>：账户存续期间保留；你可请求删除。</li>
+    <li><strong>查词历史与单词本</strong>：保留至你删除或注销账户；删除账户时关联记录将级联删除。</li>
+    <li><strong>本地数据</strong>：卸载扩展或清除扩展数据时从设备移除。</li>
+  </ul>
+
+  <hr />
+
+  <h2>6. 数据安全</h2>
+  <p>我们采取合理的技术与组织措施保护数据，包括 HTTPS 传输、安全认证与访问控制。任何传输或存储方式均无法保证绝对安全。</p>
+
+  <hr />
+
+  <h2>7. 你的权利</h2>
+  <p>根据适用法律，你可能有权：</p>
+  <ul>
+    <li>访问、更正或删除我们持有的个人数据</li>
+    <li>限制或反对某些处理</li>
+    <li>撤回同意（在基于同意的处理范围内）</li>
+  </ul>
+  <p>如需行使上述权利，请通过扩展内反馈渠道或项目仓库联系我们。卸载扩展可停止进一步的数据收集；已存储于云端的数据需另行请求删除。</p>
+
+  <hr />
+
+  <h2>8. 儿童隐私</h2>
+  <p>本扩展不面向 13 岁以下儿童（或你所在司法辖区规定的最低年龄）。我们不会故意收集儿童个人数据。</p>
+
+  <hr />
+
+  <h2>9. 跨境传输</h2>
+  <p>你的数据可能在境外服务器处理（如 Supabase、AI 服务提供商所在地区）。使用扩展即表示你理解并同意此类传输。</p>
+
+  <hr />
+
+  <h2>10. 政策变更</h2>
+  <p>我们可能更新本政策，并在本页面更新「最后更新」日期。重大变更后继续使用扩展即视为接受修订后的政策。</p>
+
+  <hr />
+
+  <h2>11. 联系我们</h2>
+  <p>如对本隐私政策有疑问，请通过扩展内反馈或 GitHub 项目仓库联系开发者。</p>
+
+  <p>使用 AIDICT 即表示你已阅读并理解本隐私政策。</p>
+</body>
+</html>
