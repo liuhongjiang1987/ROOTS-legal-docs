@@ -1,0 +1,122 @@
+# 缺陷报告 · 词根词缀学习助手
+name: 缺陷报告
+description: 报告扩展 Bug，帮助改进产品
+title: "[缺陷] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量填写下列信息，便于复现与修复。
+
+        **产品：** 词根词缀学习助手（Chrome 扩展）  
+        **建议：** 提交前先更新至 [Chrome 网上应用店](https://chromewebstore.google.com/detail/%E8%AF%8D%E6%A0%B9%E8%AF%8D%E7%BC%80%E5%AD%A6%E4%B9%A0%E5%8A%A9%E6%89%8B/oeglfhdljbfbkdalfheedcmbacegfhpa?hl=zh-CN) 最新版。
+
+  - type: input
+    id: extension_version
+    attributes:
+      label: 扩展版本
+      description: 侧栏或 chrome://extensions 中看到的版本号
+      placeholder: 例如 0.5.34
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem_area
+    attributes:
+      label: 问题出现在哪个功能？
+      options:
+        - 划词 / 红点不出现
+        - 侧栏无法打开
+        - 登录 / 账户
+        - 查词结果（释义、音标）
+        - 词根词缀拆词
+        - 词源树
+        - 同根词
+        - 查词历史
+        - 单词本
+        - AI 语素补全
+        - 深色 / 浅色主题
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: 问题描述
+      description: 请清晰、简洁地说明发生了什么
+      placeholder: 例如：在 BBC 新闻页划词 marketing 后，侧栏词源树空白不渲染
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce_steps
+    attributes:
+      label: 复现步骤
+      description: 如何一步步触发该问题？
+      value: |
+        1. 打开网页「……」
+        2. 选中单词「……」，点击红点
+        3. 在侧栏执行「……」
+        4. 出现错误：……
+    validations:
+      required: true
+
+  - type: input
+    id: sample_word
+    attributes:
+      label: 相关单词（如有）
+      description: 便于在相同词条上复现
+      placeholder: 例如 marketing、international
+
+  - type: input
+    id: page_url
+    attributes:
+      label: 出现问题的网页（如有）
+      placeholder: https://...
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: 期望行为
+      description: 您本来希望看到什么结果？
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: 实际行为
+      description: 实际发生了什么？有无报错提示？
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截图
+      description: 如有，请拖拽上传侧栏 / 网页 / 控制台截图
+
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统
+      placeholder: 例如 macOS 15、Windows 11
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: 浏览器及版本
+      placeholder: 例如 Chrome 136、Edge 136
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: 补充说明
+      description: 其他可能有用的信息（是否已登录、网络环境、是否仅特定网站出现等）

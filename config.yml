@@ -1,0 +1,12 @@
+# 词根词缀学习助手 · GitHub Issues 模板配置
+# 部署：与 privacy-policy.html 一并 push 至 liuhongjiang1987/ROOTS-legal-docs
+
+blank_issues_enabled: false
+
+contact_links:
+  - name: Chrome 网上应用店（安装 / 更新）
+    url: https://chromewebstore.google.com/detail/%E8%AF%8D%E6%A0%B9%E8%AF%8D%E7%BC%80%E5%AD%A6%E4%B9%A0%E5%8A%A9%E6%89%8B/oeglfhdljbfbkdalfheedcmbacegfhpa?hl=zh-CN
+    about: 下载或更新「词根词缀学习助手」扩展
+  - name: 隐私政策
+    url: https://liuhongjiang1987.github.io/ROOTS-legal-docs/privacy-policy.html
+    about: 了解扩展如何处理您的数据

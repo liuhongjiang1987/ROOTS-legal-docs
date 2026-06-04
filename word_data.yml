@@ -1,0 +1,81 @@
+# 词条 / 拆词反馈 · 词根词缀学习助手
+name: 词条与拆词反馈
+description: 反馈某词的释义、拆词、词源或同根词问题
+title: "[词条] "
+labels:
+  - word-data
+body:
+  - type: markdown
+    attributes:
+      value: |
+        用于反馈 **特定英文单词** 的查词结果问题，例如：
+
+        - 拆词结果不合理或缺失  
+        - 词源说明有误  
+        - 语素含义不对  
+        - 同根词遗漏明显相关词  
+
+        **说明：** 并非每个英文词都有唯一、完备的词根分解；我们会基于语言学资源核实。  
+        **请勿** 在此提交扩展崩溃、无法登录等 Bug（请选「缺陷报告」）。
+
+  - type: input
+    id: lemma
+    attributes:
+      label: 单词
+      description: 请填写英文原形或您在网页上选中的形式
+      placeholder: 例如 marketing
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data_issue_type
+    attributes:
+      label: 问题类型
+      options:
+        - 拆词（前缀 / 词根 / 后缀）有误或缺失
+        - 语素含义不对
+        - 词源文本有误
+        - 同根词遗漏或多余
+        - 释义 / 音标有误
+        - AI 语素补全质量差
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_result
+    attributes:
+      label: 当前扩展显示的内容
+      description: 请描述侧栏中您看到的结果，或粘贴截图说明
+      placeholder: |
+        例如：marketing 被拆为 …，但 -ing 未显示 / 词源树缺少 market 节点 …
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: 您认为更合理的说明（如有）
+      description: 可引用词典、教材或您的理解；不必非常专业
+    validations:
+      required: true
+
+  - type: input
+    id: page_context
+    attributes:
+      label: 发现问题的网页（可选）
+      placeholder: https://...
+
+  - type: input
+    id: extension_version
+    attributes:
+      label: 扩展版本
+      placeholder: 例如 0.5.34
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: 补充说明
+      description: 参考资料链接、相关词族示例等
